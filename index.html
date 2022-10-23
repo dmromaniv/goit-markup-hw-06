@@ -649,17 +649,106 @@
               </li>
             </ul>
           </div>
+          <div class="subscription-block">
+            <form
+              class="subscription-form"
+              name="subscription-form"
+              autocomplete="on"
+            >
+              <p class="slogan">Підпишіться на розсилку</p>
+              <div class="form-content">
+                <input
+                  name="email"
+                  class="email-input"
+                  type="email"
+                  placeholder="E-mail"
+                />
+                <button class="subscr-submit-btn button" type="submit">
+                  Підписатись
+                  <svg width="24" height="24">
+                    <use href="./images/icons.svg#icon-send"></use>
+                  </svg>
+                </button>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
     </footer>
     <!-- Modal window -->
     <div class="backdrop is-hidden" data-modal>
       <div class="modal-window">
-        <button class="modal-btn" type="button" data-modal-close>
+        <button class="modal-close-btn" type="button" data-modal-close>
           <svg width="18" height="18">
             <use href="./images/icons.svg#icon-close-black"></use>
           </svg>
         </button>
+        <form class="contact-form" name="contact-form">
+          <div
+            class="personal-info"
+            role="group"
+            aria-labelledby="contact-form-heading"
+          >
+            <p id="contact-form-heading" class="contact-form-heading">
+              Залиште свої дані, ми вам передзвонимо
+            </p>
+            <label class="contact-form-label">
+              <span class="label-text">Ім'я</span>
+              <input class="data-input" name="user-name" type="text" />
+              <svg class="contact-form-icon" width="18" height="18">
+                <use href="./images/icons.svg#icon-person-black"></use>
+              </svg>
+            </label>
+            <label class="contact-form-label">
+              <span class="label-text">Телефон</span>
+              <input class="data-input" name="phone-number" type="number" />
+              <svg class="contact-form-icon" width="18" height="18">
+                <use href="./images/icons.svg#icon-phone-black"></use>
+              </svg>
+            </label>
+            <label class="contact-form-label">
+              <span class="label-text">Пошта</span>
+              <input class="data-input" name="email" type="email" />
+              <svg class="contact-form-icon" width="18" height="18">
+                <use href="./images/icons.svg#icon-email-black"></use>
+              </svg>
+            </label>
+            <label class="contact-form-label">
+              <span class="label-text">Коментар</span>
+              <textarea
+                class="data-input text-area-input"
+                name="comment"
+                rows=""
+                placeholder="Введіть текст"
+              ></textarea>
+            </label>
+          </div>
+          <label class="contact-form-label agreement-terms-block">
+            <input
+              class="visually-hidden agreement-checkbox"
+              name="agreement"
+              type="checkbox"
+              value="yes"
+            />
+            <svg class="checkbox-icon" width="18" height="18">
+              <use
+                class="unchecked-icon"
+                href="./images/icons.svg#icon-rectangle-black"
+              ></use>
+              <use
+                class="checked-icon"
+                href="./images/icons.svg#icon-icon-check"
+              ></use>
+            </svg>
+            <span class="agreement-text">
+              Погоджуюся з розсилкою та приймаю
+              <a class="agreement-terms-link" href="#">Умови договору</a>
+            </span>
+          </label>
+          <button class="button modal-submit-btn" type="submit">
+            Відправити
+          </button>
+        </form>
       </div>
     </div>
     <script src="./js/modal.js"></script>
